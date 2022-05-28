@@ -1,0 +1,6 @@
+<h1>管理員區域 - user</h1>
+<%= link_to '新增管理員', new_admin_center_user_path %>
+<% @user.each do |user| %>
+  name: <%= user.name %>
+  email: <%= user.email %>
+<% end %>
