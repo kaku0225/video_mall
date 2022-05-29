@@ -1,4 +1,6 @@
-<%= form_for @user, url: {action: "create"} do |f| %>
+<div>建立user</div>
+
+<%= form_for @user do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -7,9 +9,6 @@
 
   <%= f.label :password %>
   <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
 
   <%= f.submit %>
 <% end %>

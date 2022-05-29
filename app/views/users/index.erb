@@ -1,0 +1,16 @@
+<h1>新增 user</h1>
+<%= link_to '新增管理員', new_admin_center_user_path %><br>
+<table>
+  <tr>
+    <th></th>
+    <th>name</th>
+    <th>email</th>
+  </tr>
+  <% @user.each do |user| %>
+    <tr>
+      <td><%= link_to '編輯', edit_admin_center_user_path(user)%></td>
+      <td><%= link_to "#{user.name}", admin_center_user_path(user) %></td>
+      <td><%= user.email %></td>
+    </tr>
+  <% end %>
+</table>

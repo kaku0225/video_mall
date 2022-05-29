@@ -2,11 +2,11 @@
 
 Rails.application.routes.draw do
   root 'welcome#index'
-
+  
+  resources :users
   namespace :admin do
     namespace :center do
       get 'index', to: 'center#index'
-      resources :users, controller: 'users'
     end
   end
 end
